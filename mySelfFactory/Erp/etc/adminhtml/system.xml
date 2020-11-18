@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="beside" translate="label" sortOrder="500">
+            <label>Beside</label>
+        </tab>
+        <section id="beside_erp" translate="label" showInDefault="1"  showInStore="1" sortOrder="100">
+            <label>ERP</label>
+            <tab>beside</tab>
+            <resource>Beside_Erp::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="5" showInDefault="1"  showInStore="1">
+                <label>General Option</label>
+                <field id="cron_schedule_send" translate="label" type="text" sortOrder="10" showInDefault="1">
+                    <label>Cron Schedule for messages sending</label>
+                    <comment>Please specify value in cron format (e.g. * * * * *)</comment>
+                </field>
+                <field id="cron_schedule_delete" translate="label" type="text" sortOrder="20" showInDefault="1">
+                    <label>Cron Schedule for messages deletion</label>
+                    <comment>Please specify value in cron format (e.g. * * * * *)</comment>
+                </field>
+                <field id="connection_timeout" translate="label" type="text" sortOrder="30" showInDefault="1" showInStore="1">
+                    <label>Connection Timeout</label>
+                    <comment>Please specify value in seconds</comment>
+                </field>
+                <field id="execution_timeout" translate="label" type="text" sortOrder="40" showInDefault="1" showInStore="1">
+                    <label>Execution Timeout</label>
+                    <comment>Please specify value in seconds</comment>
+                </field>
+                <field id="attempts_count" translate="label" type="text" sortOrder="50" showInDefault="1" showInStore="1">
+                    <label>Attempts count</label>
+                    <comment>How many attempts will be made in case if attempt fails</comment>
+                </field>
+                <field id="alert_email" translate="label" type="text" sortOrder="50" showInDefault="1" showInStore="1">
+                    <label>Email address for sending alert email</label>
+                </field>
+                <field id="days_count" translate="label" type="text" sortOrder="60" showInDefault="1" showInStore="1">
+                    <label>Number of days to leave data in the queue table</label>
+                </field>
+            </group>
+            <group id="stock_check" translate="label" type="text" sortOrder="20" showInDefault="1"  showInStore="1">
+                <label>Stock Check API</label>
+                <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="bearer" translate="label" type="text" sortOrder="20" showInDefault="1" showInStore="1">
+                    <label>Bearer Token</label>
+                </field>
+                <field id="api_url" translate="label" type="text" sortOrder="30" showInDefault="1" showInStore="1">
+                    <label>API endpoint url</label>
+                </field>
+            </group>
+            <group id="create_order" translate="label" type="text" sortOrder="30" showInDefault="1"  showInStore="1">
+                <label>Stock Check API</label>
+                <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="bearer" translate="label" type="text" sortOrder="20" showInDefault="1" showInStore="1">
+                    <label>Bearer Token</label>
+                </field>
+                <field id="api_url" translate="label" type="text" sortOrder="30" showInDefault="1" showInStore="1">
+                    <label>API endpoint url</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

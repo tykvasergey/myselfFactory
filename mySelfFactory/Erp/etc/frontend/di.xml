@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <virtualType name="Beside\Erp\Model\StockCheckApi" type="Beside\Erp\Model\ErpApi">
+        <arguments>
+            <argument name="apiType" xsi:type="string">stock_check</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Beside\Erp\Model\StockAggregateCheckApi" type="Beside\Erp\Model\ErpApi">
+        <arguments>
+            <argument name="apiType" xsi:type="string">stock_aggregate_check</argument>
+        </arguments>
+    </virtualType>
+    <type name="Beside\Erp\Model\ApiFactory">
+        <arguments>
+            <argument name="apiMap" xsi:type="array">
+                <item name="stock_check" xsi:type="string">Beside\Erp\Model\StockCheckApi</item>
+                <item name="stock_aggregate_check" xsi:type="string">Beside\Erp\Model\StockAggregateCheckApi</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

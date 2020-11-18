@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Beside\Erp\Api\ErpApiInterface" type="Beside\Erp\Model\ErpApi"/>
+    <preference for="Beside\Erp\Api\ErpConfigurationInterface" type="Beside\Erp\Model\ErpConfig"/>
+</config>

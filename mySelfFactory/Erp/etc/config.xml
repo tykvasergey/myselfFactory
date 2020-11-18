@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <beside_erp>
+            <general>
+                <cron_schedule_send>* * * * *</cron_schedule_send>
+                <cron_schedule_delete>0 0 * * 6</cron_schedule_delete>
+                <connection_timeout>20</connection_timeout>
+                <execution_timeout>60</execution_timeout>
+                <attempts_count>10</attempts_count>
+                <days_count>10</days_count>
+            </general>
+            <stock_check>
+                <active>0</active>
+            </stock_check>
+            <create_order>
+                <active>0</active>
+            </create_order>
+        </beside_erp>
+    </default>
+</config>

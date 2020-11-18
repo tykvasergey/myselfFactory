@@ -1,0 +1,15 @@
+{
+    "name": "beside/module-erp",
+    "description": "Beside Module ERP",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "require": {
+        "php": "^7.4.0"
+    },
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Beside\\Erp\\": ""
+        }
+    }
+}
